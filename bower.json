@@ -1,0 +1,36 @@
+{
+  "name": "ES6 Voting-App",
+  "version": "0.0.1",
+  "authors": [
+    "Michael Cullen"
+  ],
+  "description": "ES6 Angular Voting-App",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mick26/ES6-Angular-Node-RT-Voting-App.git"
+  },
+  "ignore": [
+    "**/*.txt",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular": "1.3.12",
+    "angular-route": "1.3.12",
+    "socket.io-client": "~1.2.0",
+    "angular-socket-io": "~0.6.0",
+    "traceur": "~0.0.85",
+    "d3": "3.5.5",
+    "nvd3": "1.1.15-beta",
+    "angularjs-nvd3-directives": "~0.0.7"
+  },
+  "resolutions": {
+    "d3": "~3.5.5",
+    "angular": "1.3.12"
+  }
+}
