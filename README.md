@@ -46,6 +46,14 @@ It should be good practice to begin coding Angular Apps using ECMAScript6 (ES6) 
 - browse to http://localhost:3000/
 
 
+## Screen Shots
+
+
+<div align="center">
+		<img width="100%" src="screen-shots/voting-app.png" alt="Voting App" title="Voting App"</img>
+</div>
+
+
 <hr>
 
 <div align="center">
