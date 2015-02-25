@@ -1,3 +1,4 @@
+
 body {
   padding-top: 50px;
 }
@@ -20,4 +21,31 @@ body {
 	width: 25%;
 	max-width: 300px;
 	text-align: right;
+}
+
+
+/*
+Pie Chart
+*/
+#exampleId {
+}
+
+
+/*
+If the document is smaller than 250 pixels wide
+dont display piechart
+*/
+@media screen and (max-width: 250px) {
+	.pieContainer {
+		display:none;
+	}
+}
+
+.pieContainer {
+height: 700px;
+}
+
+svg {
+	height: 100%;
+	width: 100%;
 }
