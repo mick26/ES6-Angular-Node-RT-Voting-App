@@ -87,7 +87,7 @@ app.use(methodOverride());
 /* ==========================================================
 serve the static index.html from the public folder
 ============================================================ */
-app.use(express.static(__dirname + '/public/src'));
+app.use(express.static(__dirname + '/public/build'));
 app.use(express.static(__dirname + '/public'));
 
 

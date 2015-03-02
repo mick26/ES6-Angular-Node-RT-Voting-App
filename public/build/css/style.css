@@ -1,0 +1,56 @@
+
+body {
+  padding-top: 50px;
+}
+
+.tab-content .lead {
+	margin-top: 20px;
+}
+
+.result-table {
+	margin: 20px 0;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.result-table td {
+	padding: 8px;
+}
+
+.result-table > tbody > tr > td:first-child {
+	width: 25%;
+	max-width: 300px;
+	text-align: right;
+}
+
+
+/*
+Pie Chart
+*/
+#exampleId {
+}
+
+
+/*
+If the document is smaller than 250 pixels wide
+dont display piechart
+*/
+@media screen and (max-width: 250px) {
+	.pieContainer {
+		display:none;
+	}
+}
+
+.pieContainer {
+height: 700px;
+}
+
+svg {
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}

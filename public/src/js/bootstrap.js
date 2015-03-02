@@ -8,7 +8,7 @@ The main App Module is 'votingModule'
 =================================================================*/ 
 'use strict';
 
-import { default as votingApp} from './js/app.js';
+import { default as votingApp} from './app.js';
 
 angular.bootstrap(document, [votingApp]);
 

@@ -1,0 +1,107 @@
+<!-- 
+Ref.
+http://cmaurer.github.io/angularjs-nvd3-directives/pie.chart.html
+-->
+
+<div class="page-header">
+	<h1><strong>Question:</strong><br>{{poll.question}}</h1>
+</div>
+
+
+<div class="mainContainer col-xs-12">
+
+	<h2><div class="label label-info error" ng-bind="error">
+	</div></h2>
+
+	<p class="lead"><strong>Please select one of the following options:</strong></p>
+
+		<div>		
+			<div class="col-xs-12">
+				<!--  
+				Form with: 
+				radio buttons -to select vote option
+				button - to return to list of voting questions
+				button - to vote on this current question
+				-->
+				<form role="form">
+					<div ng-repeat="choice in poll.choices" class="radio">
+						<label>
+							<input type="radio" name="choice" ng-model="poll.userVote" 
+								value="{{choice._id}}">
+							{{choice.text}}
+						</label>
+					</div>
+				</form>
+			</div>
+
+
+			<div class="btn-toolbar-vertical btn-toolbar-sm" role="group" aria-label="">
+				<button type="button" class="btn btn-info">
+					<a href="#/polls">Back to Poll List</a></button>
+				<button type="button" class="btn btn-info" ng-click="vote()">
+					Cast Vote
+				</button>
+			</div>
+			<div ng-if="poll.totalVotes > 0">
+				<p>
+					<em>
+						{{poll.totalVotes}} votes counted so far.
+						<span ng-show="poll.userChoice">You voted for 
+							<strong>{{poll.userChoice.text}}</strong>.
+						</span>
+					</em>
+				</p>
+			</div>
+		</div>
+		
+	
+	<div ng-if="poll.totalVotes > 0">
+
+		<div class="col-md-6 well">
+			<!-- ==========================================
+			Bar Chart 
+			=========================================== -->
+			<table class="result-table">
+				<tr ng-repeat="choice in poll.choices">
+					<td>{{choice.text}}</td>
+					<td>
+						<table style="background-color: lightblue; 
+								width: {{choice.votes.length/poll.totalVotes*100}}%; 
+								text-align: right">
+							<tr><td>{{choice.votes.length}}</td></tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+				
+
+		<div class="col-md-6 text-center">
+
+			<!-- ==========================================
+			Pie Chart 
+			=========================================== -->
+			<div class="pieContainer well  
+				col-sm-12" id="pie-chart"> 
+
+					<h2>Pie Chart</h2>
+					<nvd3-pie-chart
+				    	data = "pieData"
+				        id = "exampleId"
+				        margin="{left:15,top:0,bottom:0,right:15}"
+				        x = "xFunction()"
+				        y = "yFunction()"
+				       	tooltips="true"
+				       	color: "colorFunction()"
+				       	showLegend="true"
+				       	labelType="key"
+				        showLabels="true">
+		  
+						<svg id="svg1">
+		  				</svg>
+				    </nvd3-pie-chart>
+			</div>
+		</div>
+	</div>
+</div>
+

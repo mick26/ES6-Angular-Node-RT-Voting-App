@@ -1,0 +1,64 @@
+<!-- 
+Ref.
+A run-time type assertion library for JavaScript
+Designed to be used with Traceur.
+https://www.npmjs.com/package/rtts-assert
+-->
+<!DOCTYPE html>
+
+<html lang='en'>
+
+  <head>
+    <base href="/">
+    <meta charset='utf-8' />
+    <meta name='viewport', content='width=device-width, initial-scale=1, user-scalable=no' >
+    <title>Survey App</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./lib/nvd3/nv.d3.css"/>
+    <link rel='stylesheet' href='css/style.css' />
+  </head>
+  
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role='navigation'>
+      <div class="navbar-header">
+        <a class="navbar-brand" href='#/polls'>Polls</a>
+      </div>
+    </nav>
+    
+    <div class="container">
+      <!-- this is where the views will be injected -->
+      <div ng-view></div>
+    </div>
+
+
+    <!-- JS -->
+    <script src="./lib/angular/angular.js"></script>
+    <script src="./lib/angular-route/angular-route.js"></script>
+    <script src="./lib/socket.io-client/socket.io.js"></script> 
+    <!-- Brian Fords module for using Socket.io with Angular -->  
+    <script src="./lib/angular-socket-io/socket.js"></script>
+    <script src="./lib/d3/d3.js"></script>
+    <script src="./lib/nvd3/nv.d3.js"></script>
+    <script src="./lib/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
+
+    <script src="./lib/traceur-runtime/traceur-runtime.js"></script>
+    <script src="./lib/requirejs/require.js"></script>
+
+<!-- 
+    <script src="/node_modules/traceur/bin/traceur-runtime.js"></script>
+    <script src="/node_modules/requirejs/require.js"></script>
+ -->
+
+    <script>
+       require.config({
+         paths: {
+           assert: './node_modules/rtts-assert/dist/amd/assert'
+         },
+         deps: ['./build/js/bootstrap.js']
+       });
+    </script>
+
+  </body>
+</html>

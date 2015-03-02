@@ -27,7 +27,9 @@
     "traceur": "~0.0.85",
     "d3": "3.5.5",
     "nvd3": "1.1.15-beta",
-    "angularjs-nvd3-directives": "~0.0.7"
+    "angularjs-nvd3-directives": "~0.0.7",
+    "requirejs": "~2.1.16",
+    "traceur-runtime": "~0.0.85"
   },
   "resolutions": {
     "d3": "~3.5.5",
